@@ -67,6 +67,10 @@ These properties are valid for components in a CycloneDX SBOM file and can be us
     * `manual`
        The component was manually added or confirmed by a user.
        
+- `vts:discovered_by`
+
+  In case multiple tools were used to detect components, this property contains the name of the tool. It should fit the tool described in `metadata.tools[].name`
+       
 - `vts:discovery:confidence`
 
   Describes the confidence level of the component discovery.
