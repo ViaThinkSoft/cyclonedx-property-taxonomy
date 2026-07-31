@@ -55,6 +55,10 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     * .NET PackageReferences/NuGet packages that caused assembly references to be emitted into the resulting .NET assembly.
       The referenced runtime assembly (e.g. DLL) should be represented separately with disposition "artifact" if it is delivered with the product.
 
+- `vts:install_location`
+
+  Default location on the end-user's system where the artifact is stored. On Windows, the path is typically `C:\Program Files\...`; on Linux, applications may be installed in locations such as `/usr/bin/...`; on macOS, the default location is usually `/Applications`; and for web applications, `/var/www/...` can be used to indicate a directory managed by the web server.
+
 - `vts:discovery`
 
   Describes the origin and method by which the component was discovered.
