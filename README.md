@@ -111,7 +111,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
 
   Values: `yes`, `no`, `unknown`
 
-- `vts:used-toolchain`
+- `vts:used_toolchain`
 
   Toolchain information, such as primary programming language, compiler and version, linker and version, resource compiler and version, etc.
 
