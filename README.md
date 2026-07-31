@@ -42,7 +42,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     * ODBC Driver
     * Java Runtime Environment
     
-    Note that if runtimes binaries are shipped with the product, there needs to be an additional component with disposition `artifact`.
+    Note that if runtime binaries are shipped with the product, there needs to be an additional component with disposition `artifact`.
 
   - `absent`
     The component itself is not part of the product, but generated binary content originating from this component is included in a delivered artifact.
@@ -51,9 +51,9 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     * RTTI, Startup code, initialization/finalization code, exception tables, etc. that was created by a compiler.
       Note that the component should represent the generated contribution, not the tool that created it.
       For example, the component is "Delphi compiler-generated startup code", not "Delphi compiler".
-      Also note note that language-provided runtimes (such as the Delphi VCL/RTL) are better to be included as separate components with disposition "embedded", since the VCL/RTL is mostly independent from the actual Pascal compiler.
+      Also note that language-provided runtimes (such as the Delphi VCL/RTL) are better to be included as separate components with disposition `embedded`, since the VCL/RTL is mostly independent from the actual Pascal compiler.
     * .NET PackageReferences/NuGet packages that caused assembly references to be emitted into the resulting .NET assembly.
-      The referenced runtime assembly (e.g. DLL) should be represented separately with disposition "artifact" if it is delivered with the product.
+      The referenced runtime assembly (e.g., DLL) should be represented separately with disposition `artifact` if it is delivered with the product.
 
 - `vts:install_location`
 
@@ -87,7 +87,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
   
   Possible values:
     * `confirmed`
-      The component was found and there is strong evidence that it is used or belongs to the analyzed system.
+      The component was found, and there is strong evidence that it is used or belongs to the analyzed system.
     * `uncertain`
       The component was found, but its actual usage or relationship to the analyzed system could not be confirmed.
     * `inferred`
@@ -101,7 +101,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
   
 - `vts:obfuscated`
 
-  Describes whether the majority of the file was obfuscated or not, or if the main purpose is confidential nature, such as a copy-protection or security-related DLL.
+  Describes whether the majority of the file was obfuscated or not.
 
   Values: `yes`, `no`, `unknown`
   
@@ -113,7 +113,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
 
 - `vts:used-toolchain`
 
-  toolchain information, such as primary programming language, compiler and version, linker and version, resource compiler and version, etc.
+  Toolchain information, such as primary programming language, compiler and version, linker and version, resource compiler and version, etc.
 
   Example: `Delphi Compiler 12.0; Borland Resource Compiler 5.82; Delphi Linker 12.0`
 
@@ -134,7 +134,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
 
 - `vts:security:...`
 
-  Various security features of the binary file. The list is most likely not complete, hence please let us know if you have more suggestions (create a [GitHub issue](https://github.com/ViaThinkSoft/cyclonedx-property-taxonomy/issues)).
+  Various security features of the binary file. The list is most likely not complete; hence please let us know if you have more suggestions (create a [GitHub issue](https://github.com/ViaThinkSoft/cyclonedx-property-taxonomy/issues)).
 
 - `vts:security:dep_nx`
 
@@ -159,6 +159,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
   Supports Control Flow Guard. PE Load Config Directory (GuardFlags)
 
   Values: `disabled`, `enabled`, `unknown`
+  
 - `vts:security:safe_seh`
 
   Supports Safe Structured Exception Handling. PE-Feature for 32-Bit x86
@@ -204,7 +205,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
 
 - `vts:3p:virustotal:scanresult`
 
-  Timestamp (format: ISO 8601 / RFC 3339), latest result (`detected || "/" || total`), and community score, at the time of the SBOM generation, delimited by a whitespace.
+  Timestamp (format: ISO 8601 / RFC 3339), latest result (`detected || "/" || total`), and community score, at the time of the SBOM generation, delimited by whitespaces.
 
   Example: `2026-07-31T10:44:00Z 5/71 32` means that the latest scan (at the time of the SBOM generation) was July 31st 2026, 10:44 GMT, 5 out of 71 vendors detected the file as malicious, and there is a community score of +32.
 
