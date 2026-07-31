@@ -48,10 +48,10 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     The component itself is not part of the product, but generated binary content originating from this component is included in a delivered artifact.
     
     Examples:
-    * RTTI, Startup code, initialization/finalization code, exception tables, etc. that was created by a compiler.
+    * RTTI, Startup code, initialization/finalization code, exception tables, etc. that were created by a compiler.
       Note that the component should represent the generated contribution, not the tool that created it.
       For example, the component is "Delphi compiler-generated startup code", not "Delphi compiler".
-      Also note that language-provided runtimes (such as the Delphi VCL/RTL) are better to be included as separate components with disposition `embedded`, since the VCL/RTL is mostly independent from the actual Pascal compiler.
+      Also note that language-provided runtimes (such as the Delphi VCL/RTL) are better included as separate components with disposition `embedded`, since the VCL/RTL is mostly independent from the actual Pascal compiler.
     * .NET PackageReferences/NuGet packages that caused assembly references to be emitted into the resulting .NET assembly.
       The referenced runtime assembly (e.g., DLL) should be represented separately with disposition `artifact` if it is delivered with the product.
 
