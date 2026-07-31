@@ -5,7 +5,7 @@ CycloneDX Property Taxonomy by ViaThinkSoft
 
 This document defines the namespaces and properties used by the `vts` namespace in the [CycloneDX Property Taxonomy](https://github.com/CycloneDX/cyclonedx-property-taxonomy).
 
-These properties are valid for components in a CycloneDX SBOM file and can be used by anyone, not just for ViaThinkSoft products:
+These optional properties are valid for components in a CycloneDX SBOM file and can be used by anyone, not just for ViaThinkSoft products:
 
 - `vts:disposition`
 
@@ -109,10 +109,6 @@ These properties are valid for components in a CycloneDX SBOM file and can be us
 
 - `vts:debuginfo`
 
-  Describes where debug information can be found:
-
-- `vts:debuginfo`
-
   Describes the availability and location of debug information.
 
   Possible values:
@@ -200,7 +196,7 @@ These properties are valid for components in a CycloneDX SBOM file and can be us
 
   Timestamp (format: ISO 8601 / RFC 3339), latest result (`detected || "/" || total`), and community score, at the time of the SBOM generation, delimited by a whitespace.
 
-  Example: `2026-07-31T10:44:00Z 5/71 32` means that the latest scan (at the time of the SBOM generator) was July 31st 2026, 10:44 GMT, 5 out of 71 vendors detected the file as malicious, and there is a community score of +32. This property is OPTIONAL.
+  Example: `2026-07-31T10:44:00Z 5/71 32` means that the latest scan (at the time of the SBOM generation) was July 31st 2026, 10:44 GMT, 5 out of 71 vendors detected the file as malicious, and there is a community score of +32.
 
 - `vts:3p:msft:dotnet:asm:...` assemblyIdentity in the style of .net assembly files.
 
