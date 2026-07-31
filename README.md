@@ -77,10 +77,6 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     * `manual`
        The component was manually added or confirmed by a user.
        
-- `vts:discovered_by`
-
-  In case multiple tools were used to detect components, this property contains the name of the tool. It should fit the tool described in `metadata.tools[].name`
-       
 - `vts:discovery:confidence`
 
   Describes the confidence level of the component discovery.
@@ -93,6 +89,10 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     * `inferred`
       The component was not directly identified; its presence or usage is only assumed based on indirect evidence.
       
+- `vts:discovered_by`
+
+  In case multiple tools were used to detect components, this property contains the name of the tool. It should fit the tool described in `metadata.tools[].name`
+       
 - `vts:encrypted`
 
   Describes whether the majority of the file was encrypted or not.
