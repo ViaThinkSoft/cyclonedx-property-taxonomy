@@ -202,6 +202,18 @@ These properties are valid for components in a CycloneDX SBOM file and can be us
 
   Example: `2026-07-31T10:44:00Z 5/71 32` means that the latest scan (at the time of the SBOM generator) was July 31st 2026, 10:44 GMT, 5 out of 71 vendors detected the file as malicious, and there is a community score of +32. This property is OPTIONAL.
 
+- `vts:3p:msft:dotnet:asm:...` assemblyIdentity in the style of .net assembly files.
+
+- `vts:3p:msft:dotnet:asm:assemblyName`, e.g. `MyLibrary`
+
+- `vts:3p:msft:dotnet:asm:version`, e.g. `1.0.0.0`
+
+- `vts:3p:msft:dotnet:asm:culture`, e.g. `de-DE`
+
+- `vts:3p:msft:dotnet:asm:publicKeyToken`, e.g. `6595b64144ccf1df`
+
+- `vts:3p:msft:dotnet:asm:processorArchitecture`, e.g. `MSIL`
+
 - `vts:3p:msft:pe:asm:...`
   assemblyIdentity in the style of Manifest files, such as COM libraries.
 
@@ -214,18 +226,6 @@ These properties are valid for components in a CycloneDX SBOM file and can be us
 - `vts:3p:msft:pe:asm:processorArchitecture`, e.g. `amd64`
 
 - `vts:3p:msft:pe:asm:language`, e.g. `de-DE`
-
-- `vts:3p:msft:dotnet:asm:...` assemblyIdentity in the style of .net assembly files.
-
-- `vts:3p:msft:dotnet:asm:assemblyName`, e.g. `MyLibrary`
-
-- `vts:3p:msft:dotnet:asm:version`, e.g. `1.0.0.0`
-
-- `vts:3p:msft:dotnet:asm:culture`, e.g. `de-DE`
-
-- `vts:3p:msft:dotnet:asm:publicKeyToken`, e.g. `6595b64144ccf1df`
-
-- `vts:3p:msft:dotnet:asm:processorArchitecture`, e.g. `MSIL`
 
 - `vts:3p:msft:pe:versioninfo:...` Version information data as [described by Microsoft](https://learn.microsoft.com/en-us/windows/win32/menurc/versioninfo-resource).
 
