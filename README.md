@@ -14,7 +14,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
   Possible values are:
 
   - `artifact`
-    The component exists as a standalone file delivered with the product.
+    The component exists as a standalone file delivered with the product, or as a standalone file after installing and/or unpacking the software.
     
     Examples:
     * EXE, DLL, DRV...
@@ -24,7 +24,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     * Configuration files
 
   - `embedded`
-    The component's content, or a compiled/processed representation of the component, is included in a delivered artifact and is not delivered as a standalone file.
+    The component's content, or a compiled/processed representation of the component, is included in a delivered artifact and is not delivered, unpacked, or installed as a standalone file.
     
     Examples:
     * a font stored as a PE resource
@@ -91,17 +91,17 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
       
 - `vts:discovered_by`
 
-  In case multiple tools were used to detect components, this property contains the name of the tool. It should fit the tool described in `metadata.tools[].name`
+  In case multiple tools were used to detect components, this property contains the name of the tool. It should fit the tool described in `metadata.tools[].bom-ref` (preferred), or `metadata.tools[].name`.
        
 - `vts:encrypted`
 
-  Describes whether the majority of the file was encrypted or not.
+  Describes whether the majority of the file is encrypted or not.
   
   Values: `yes`, `no`, `unknown`
   
 - `vts:obfuscated`
 
-  Describes whether the majority of the file was obfuscated or not.
+  Describes whether the majority of the file is obfuscated or not.
 
   Values: `yes`, `no`, `unknown`
   
@@ -207,7 +207,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
 
   Timestamp (format: ISO 8601 / RFC 3339), latest result (`detected || "/" || total`), and community score, at the time of the SBOM generation, delimited by whitespaces.
 
-  Example: `2026-07-31T10:44:00Z 5/71 32` means that the latest scan (at the time of the SBOM generation) was July 31st 2026, 10:44 GMT, 5 out of 71 vendors detected the file as malicious, and there is a community score of +32.
+  Example: `2026-07-31T10:44:00Z 5/71 32` means that the latest scan (at the time of the SBOM generation) was July 31st 2026, 10:44 GMT, 5 out of 71 vendors detected the file as malicious, and it had a community score of +32.
 
 - `vts:3p:msft:dotnet:asm:...` assemblyIdentity in the style of .net assembly files.
 
