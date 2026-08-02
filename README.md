@@ -57,7 +57,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
 
 - `vts:install_location`
 
-  Default location on the end-user's system where the artifact is stored.
+  Default location (full path including file name) on the end-user's system where the artifact is stored.
 
   Examples
   * On Windows, the path is typically `C:\Program Files\...`
