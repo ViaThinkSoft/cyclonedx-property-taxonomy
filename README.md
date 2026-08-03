@@ -91,7 +91,7 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
       
 - `vts:discovered_by`
 
-  In case multiple tools were used to detect components, this property contains the name of the tool. It should fit the tool described in `metadata.tools[].bom-ref` (preferred), or `metadata.tools[].name`.
+  In case multiple tools were used to detect components, this property contains the name of the tool. It should fit the tool described in `metadata.tools.components[].bom-ref` (preferred), or `metadata.tools.components[].name`.
        
 - `vts:encrypted`
 
