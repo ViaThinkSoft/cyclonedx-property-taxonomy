@@ -176,11 +176,11 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
 
   The binary file (EXE, PDF, etc.) was signed.
 
-  Values: `disabled`, `enabled`, `unknown`
+  Values: `signed`, `unsigned`, `invalid` (invalid format, signature error, or missing timestamp signature), `unknown`
 
 - `vts:security:code_signing:digest_algo`
 
-  Digest algorithm used for the code signature, e.g. `sha256`
+  Digest algorithm used for the code signature, e.g. `sha256`. Possible value is `unknown`.
 
 - `vts:security:code_signing:root_ca`
 
