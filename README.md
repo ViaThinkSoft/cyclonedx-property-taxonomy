@@ -132,6 +132,10 @@ These optional properties are valid for components in a CycloneDX SBOM file and 
     * `unknown`
       The presence or absence of debug information could not be determined.
 
+- `vts:oid_filetype`
+
+  In case the file type is identified by an OID, especially if the file contents start with a square bracket, followed by an OID in dot-notation following a closing square bracket (such as `[2.999]` ), then the property `vts:oid_filetype` can have the OID in dot-notation.
+
 - `vts:security:...`
 
   Various security features of the binary file. The list is most likely not complete; hence please let us know if you have more suggestions (create a [GitHub issue](https://github.com/ViaThinkSoft/cyclonedx-property-taxonomy/issues)).
